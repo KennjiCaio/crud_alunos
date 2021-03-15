@@ -84,10 +84,11 @@ let idLivro = 1;
 let livros = [
     {
         id: 1,
-        titulo: "abc",
-        descricao: "def",
-        edicao: "ghi",
-        autor: "jkl"
+        titulo: "Livro ISBN",
+        descricao: "International Standard Book Number",
+        edicao: "1 Edicao",
+        autor: "Wikipédia",
+        isbn: "978-3-16-148410-0"
     }
 ]
 
@@ -105,7 +106,8 @@ app.post("/livros", (req, res, next) => {
         titulo: livro.titulo,
         descricao: livro.descricao,
         edicao: livro.edicao,
-        autor: livro.autor
+        autor: livro.autor,
+        isbn: livro.isbn
     });
 
     return res.status(201).json(livros);
